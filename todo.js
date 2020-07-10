@@ -1,3 +1,18 @@
+// import metropoles from 'metropoles'
+// import * as data from './metropole.json';
+
+
+// fetch('metropole.json')
+//   .then(resp => resp.json())
+//   .then((packageJson) => {
+    // console.log(packageJson);
+
+  // });
+
+// 
+
+// console.log(metropoles)
+
 
 /////Page change get 
 
@@ -42,17 +57,23 @@ let arrDays = getFirstDayOfWeek(thisYear, weekOfyear)
 titleTop = document.querySelector('h1')
 titleTop.textContent = "Semaine" + weekOfyear + " " + thisYear
 
+
+fetch("metropole.json").then(function (data) {
+  return data.json()
+})
+.then(function (holyday) {
+    console.log(holyday)
+
 //Todo List 
-const app1 = new Controller(new Model(), new View("0"))
-const app2 = new Controller(new Model(), new View("1"))
-const app3 = new Controller(new Model(), new View("2"))
-const app4 = new Controller(new Model(), new View("3"))
-const app5 = new Controller(new Model(), new View("4"))
-const app6 = new Controller(new Model(), new View("5"))
-const app7 = new Controller(new Model(), new View("6"))
+const app1 = new Controller(new Model(), new View("0",holyday))
+const app2 = new Controller(new Model(), new View("1",holyday))
+const app3 = new Controller(new Model(), new View("2",holyday))
+const app4 = new Controller(new Model(), new View("3",holyday))
+const app5 = new Controller(new Model(), new View("4",holyday))
+const app6 = new Controller(new Model(), new View("5",holyday))
+const app7 = new Controller(new Model(), new View("6",holyday))
 
-
-
+})
 
 ////////////Page set
 

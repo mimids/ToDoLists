@@ -1,6 +1,6 @@
 ////////////////////////////////////////
 class View {
-  constructor(root) {
+  constructor(root,holyday) {
     this.root = root
 
     this.app = this.getElement("#week" + this.root)

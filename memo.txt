@@ -1,0 +1,14 @@
+dans un terminal:
+cd mon_repertoire
+sudo npm install -g http-server
+http-server
+
+fetch("test.json").then(function (data) {
+    return data.json()
+})
+.then(function (data) {
+      console.log(data)
+})
+
+
+localhost:8080/index.html
